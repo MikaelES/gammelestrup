@@ -28,14 +28,13 @@ if (isset($_POST['subscribe'])) {
                 
             </aside>";
 } else {
-    $output = "<div><p>Cvr nummer: 35546286<br />Telefon: <a href=\"tel:+45xxx\">+45 2658 5981</a><br />E-mail: <a href=\"mailto:info@dukedenverfilm.dk\">info@dukedenverfilm.dk</a></p>
+    $output = "<div><p>Cvr nummer: 35546286<br />Telefon: <a href=\"tel:+4586483001\">+45 8648 3001</a><br />E-mail: <a href=\"mailto:post@gammelestrup.dk\">post@gammelestrup.dk</a></p>
  
-                 <p><br />Find us at
-               Godsbanen,<br />
-             Skovgaarsgade 3<br />
-               8000 Aarhus C<br /></p><br /></div>
+                 <p><br />Find us at<br />
+             Randersvej 2<br />
+               8963 Auning<br /></p><br /></div>
                
-               <iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2222.183746591283!2d10.192521815946161!3d56.153927580662554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464c3f932896e263%3A0x47cb306d576a605!2sSkovgaardsgade+3%2C+8000+Aarhus!5e0!3m2!1sen!2sdk!4v1464272516687\" width=\"100%\" height=\"450\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>";
+               <iframe src=\"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d8822.920731051547!2d10.344315!3d56.437949!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x18d1915b6fde2c77!2sGammel+Estrup+-+Herreg%C3%A5rdsmuseet!5e0!3m2!1sen!2sdk!4v1480600747577\" width=\"100%\" height=\"450\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>";
 }
 return $output;
 
