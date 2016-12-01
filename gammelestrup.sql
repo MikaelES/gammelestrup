@@ -1,7 +1,5 @@
 ########################################
-# MySQL Crash Course
-# http://www.forta.com/books/0672327120/
-# Example table creation scripts
+# Gammel Estrup initial SQL request
 ########################################
 
 
