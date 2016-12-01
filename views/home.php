@@ -8,7 +8,7 @@ $pageData->title = "Home";
 
 return "                
                 <section>    
-                    <h2>Aarhus 2017/h2>
+                    <h2>Aarhus 2017</h2>
 
                     <p>Old manors in new perspective</a>
                     </p>

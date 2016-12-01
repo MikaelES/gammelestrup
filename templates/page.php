@@ -5,7 +5,7 @@ return "<!doctype html>
 <html lang=\"en\">
 <head>
 <meta charset=\"utf-8\">
-<title>$pageData->title - Duke Denver Film</title>
+<title>$pageData->title - Tidsrejser for hele familien</title>
 <meta name=\"keywords\" content=\"$pageData->keywords\"/>
 <meta name=\"description\" content=\"$pageData->description\"/>
 <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">

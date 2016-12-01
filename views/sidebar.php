@@ -6,8 +6,8 @@ if (isset($_POST['subscribe'])) {
 } elseif ($fileToLoad === "home") {
     //this runs if form was NOT submitted
     $output = "<aside role=\"complementary\" class=\"mod\">
-                <h2>Our showreel</h2>
-                  <iframe height=\"250\" src=\"https://www.youtube.com/embed/uB-1ZZ2ilAQ\" frameborder=\"0\" allowfullscreen></iframe>  
+                <h2>Just happened</h2>
+                  <iframe height=\"250\" src=\"https://www.youtube.com/embed/leq1hcocgBM\" frameborder=\"0\" allowfullscreen></iframe>  
             </aside>
             
             <aside role=\"complementary\" class=\"mod\">
@@ -28,7 +28,7 @@ if (isset($_POST['subscribe'])) {
                 
             </aside>";
 } else {
-    $output = "<div><p>Cvr nummer: 35546286<br />Telefon: <a href=\"tel:+4526585981\">+45 2658 5981</a><br />E-mail: <a href=\"mailto:info@dukedenverfilm.dk\">info@dukedenverfilm.dk</a></p>
+    $output = "<div><p>Cvr nummer: 35546286<br />Telefon: <a href=\"tel:+45xxx\">+45 2658 5981</a><br />E-mail: <a href=\"mailto:info@dukedenverfilm.dk\">info@dukedenverfilm.dk</a></p>
  
                  <p><br />Find us at
                Godsbanen,<br />

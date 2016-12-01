@@ -12,8 +12,8 @@ return "
         <nav id=\"menu\" role=\"navigation\">
             <ul title=\"Main menu\" class=\"primary\">
                 <li><a href=\"index.php?page=about\" title=\"About us\">about us</a></li>
-                <li><a href=\"index.php?page=portfolio\" title=\"Portfolio\">portfolio</a></li>
-                <li><a href=\"index.php?page=prices\" title=\"Prices\">prices</a></li>
+                <li><a href=\"index.php?page=manors\" title=\"Manors\">manors</a></li>
+                <li><a href=\"index.php?page=events\" title=\"Events\">events</a></li>
                 <li><a href=\"index.php?page=contact\" title=\"Contacts\">contact</a></li>
             </ul>
         </nav>
@@ -23,9 +23,9 @@ return "
         <nav id=\"menu\" role=\"navigation\">
             <ul title=\"Main menu\" class=\"primary\">
                 <li><a href=\"index.php?page=about\" title=\"About us\">about us</a></li>
-                <li><a href=\"index.php?page=portfolio\" title=\"Portfolio\">portfolio</a></li>
+                <li><a href=\"index.php?page=manors\" title=\"Portfolio\">manors</a></li>
                 <li><a href=\"index.php?page=home\" title=\"Home\"><img src=\"./img/$logo\" width=\"200\" alt=\"Logo > Home\"></a></li>
-                <li><a href=\"index.php?page=prices\" title=\"Prices\">prices</a></li>
+                <li><a href=\"index.php?page=events\" title=\"events\">events</a></li>
                 <li><a href=\"index.php?page=contact\" title=\"Contacts\">contact</a></li>
             </ul>
         </nav>
