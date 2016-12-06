@@ -1,16 +1,18 @@
 <?php
 
 // decide which banner we are going to show
+
+// video is turned off
 if ($fileToLoad === "home") {
     return "
         <div id=\"video-wrapper\">
-            
+        <!--     
         <video id=\"movie\" poster=\"../img/video_poster.jpg\" width=\"320\" height=\"240\" style=\"width: 100%; height: 100%;\" preload autoplay muted loop>                
-        <source src=\"video/ddf.mp4\" type='video/mp4' />
-        <source src=\"video/ddf.webm\" type='video/webm; codecs=\"vp8, vorbis\"' />
-        <source src=\"video/ddf.ogv\" type='video/ogg; codecs=\"theora, vorbis\"' />
+        <source src=\"video/video.mp4\" type='video/mp4' />
+        <source src=\"video/video.webm\" type='video/webm; codecs=\"vp8, vorbis\"' />
+        <source src=\"video/video.ogv\" type='video/ogg; codecs=\"theora, vorbis\"' />
         <p>You can not see this promotional video because this browser does not support our video formats.</p>
-        </video>
+        </video> -->
             
         </div>";
 } elseif (isset($_GET['id'])) {
