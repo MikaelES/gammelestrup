@@ -47,7 +47,7 @@ $pageData->sidebar = include_once "views/sidebar.php";
 $pageData->footer = include_once "views/footer.php";
 
 // necessary scripts
-$pageData->addScript('http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'); // jQ
+$pageData->addScript('http://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'); // jQ
 $pageData->addScript('js/toggle.js'); // dropdown menu and so on
 $pageData->addScript('js/isotope-docs.min.js'); // works in the portfolio
 

@@ -7,16 +7,21 @@ require_once "DataObject.class.php";
 class Member extends DataObject {
 
   protected $data = array(
-    "id" => "",
-    "username" => "",
-    "password" => "",
-    "firstName" => "",
-    "lastName" => "",
-    "joinDate" => "",
-    "gender" => "",
-    "favoriteGenre" => "",
-    "emailAddress" => "",
-    "otherInterests" => ""
+    "manor_id" => "",
+    "latitude" => "",
+    "longitude" => "",
+    "title" => "",
+    "description_short" => "",
+    "description" => "",
+    "keywords" => "",
+    "admission" => "",
+    "parking" => "",
+    "address" => "",
+    "phone" => "",
+    "user_email" => "",
+    "function" => "",
+    "thumbnail" => "",
+    "user_id" => ""
   );
 
   private $_genres = array(
@@ -30,17 +35,15 @@ class Member extends DataObject {
   );
 
 
-// connect methode to create a database connection
+// connect method to create a database connection
   public static function getMembers( $startRow, $numRows, $order ) {
     $conn = parent::connect();
 
-
     // * (all) columns from the members table ordered by the $order variable, and limited to the range 
-    $sql = "SELECT SQL_CALC_FOUND_ROWS * FROM " . TBL_MEMBERS . " ORDER BY $order LIMIT :startRow, :numRows";
+    $sql = "SELECT SQL_CALC_FOUND_ROWS * FROM " . TBL_MANORS . " ORDER BY $order LIMIT :startRow, :numRows";
 
     try {
       $st = $conn->prepare( $sql );
-
 
       // :startRow and :numRows are called placeholders or parameter markers. They serve two purposes. 
       // First of all, they let you prepare — that is, get MySQL to parse — a query once, then run it 
@@ -72,7 +75,7 @@ class Member extends DataObject {
 
   public static function getMember( $id ) {
     $conn = parent::connect();
-    $sql = "SELECT * FROM " . TBL_MEMBERS . " WHERE id = :id";
+    $sql = "SELECT * FROM " . TBL_MANORS . " WHERE id = :id";
 
     try {
       $st = $conn->prepare( $sql );
@@ -89,7 +92,7 @@ class Member extends DataObject {
 
   public static function getByUsername( $username ) {
     $conn = parent::connect();
-    $sql = "SELECT * FROM " . TBL_MEMBERS . " WHERE username = :username";
+    $sql = "SELECT * FROM " . TBL_MANORS . " WHERE user_id = :user_id";
 
     try {
       $st = $conn->prepare( $sql );
@@ -104,13 +107,13 @@ class Member extends DataObject {
     }
   }
 
-  public static function getByEmailAddress( $emailAddress ) {
+  public static function getByEmailAddress( $function ) {
     $conn = parent::connect();
-    $sql = "SELECT * FROM " . TBL_MEMBERS . " WHERE emailAddress = :emailAddress";
+    $sql = "SELECT * FROM " . TBL_MANORS . " WHERE function = :function";
 
     try {
       $st = $conn->prepare( $sql );
-      $st->bindValue( ":emailAddress", $emailAddress, PDO::PARAM_STR );
+      $st->bindValue( ":function", $function, PDO::PARAM_STR );
       $st->execute();
       $row = $st->fetch();
       parent::disconnect( $conn );
@@ -135,7 +138,7 @@ class Member extends DataObject {
 
   public function insert() {
     $conn = parent::connect();
-    $sql = "INSERT INTO " . TBL_MEMBERS . " (
+    $sql = "INSERT INTO " . TBL_MANORS . " (
               username,
               password,
               firstName,
@@ -179,7 +182,7 @@ class Member extends DataObject {
   public function update() {
     $conn = parent::connect();
     $passwordSql = $this->data["password"] ? "password = password(:password)," : "";
-    $sql = "UPDATE " . TBL_MEMBERS . " SET
+    $sql = "UPDATE " . TBL_MANORS . " SET
               username = :username,
               $passwordSql
               firstName = :firstName,
@@ -213,7 +216,7 @@ class Member extends DataObject {
   
   public function delete() {
     $conn = parent::connect();
-    $sql = "DELETE FROM " . TBL_MEMBERS . " WHERE id = :id";
+    $sql = "DELETE FROM " . TBL_MANORS . " WHERE id = :id";
 
     try {
       $st = $conn->prepare( $sql );
@@ -228,7 +231,7 @@ class Member extends DataObject {
 
   public function authenticate() {
     $conn = parent::connect();
-    $sql = "SELECT * FROM " . TBL_MEMBERS . " WHERE username = :username AND password = password(:password)";
+    $sql = "SELECT * FROM " . TBL_MANORS . " WHERE username = :username AND password = password(:password)";
 
     try {
       $st = $conn->prepare( $sql );

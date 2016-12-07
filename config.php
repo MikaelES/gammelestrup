@@ -4,7 +4,7 @@
 // be stored outside of document root folder
 
 // provide database name 
-define( "DB_DSN", "mysql:dbname=mydatabase" );
+define( "DB_DSN", "mysql:dbname=tidsrejser" );
 
 // and login detail
 define( "DB_USERNAME", "root" );
@@ -14,7 +14,7 @@ define( "DB_PASSWORD", "" );
 define( "PAGE_SIZE", 5 );
 
 // name of manors table in the database
-define( "TBL_MEMBERS", "members" );
+define( "TBL_MANORS", "manors" );
 
 // name of access log table
 define( "TBL_ACCESS_LOG", "accessLog" );

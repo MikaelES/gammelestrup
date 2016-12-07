@@ -1,15 +1,21 @@
 <?php
 
-require_once( "common.inc.php" );
+require_once( "./common.inc.php" );
 require_once( "../config.php" );
 require_once( "classes/Member.class.php" );
+
+// Manors
+$pageData->title = "Manors";
+
+// $latest = portfolioItem::showManorsItem(4);
 
 $start = isset( $_GET["start"] ) ? (int)$_GET["start"] : 0;
 $order = isset( $_GET["order"] ) ? preg_replace( "/[^ a-zA-Z]/", "", $_GET["order"] ) : "title";
 list( $members, $totalRows ) = Member::getMembers( $start, PAGE_SIZE, $order );
-displayPageHeader( "View manors" );
+
 
 ?>
+
     <h2>Displaying members <?php echo $start + 1 ?> - <?php echo min( $start +  PAGE_SIZE, $totalRows ) ?> of <?php echo $totalRows ?></h2>
 
     <table cellspacing="0" style="width: 30em; border: 1px solid #666;">
@@ -43,8 +49,3 @@ foreach ( $members as $member ) {
       <a href="view_members.php?start=<?php echo min( $start + PAGE_SIZE, $totalRows ) ?>&amp;order=<?php echo $order ?>">Next page</a>
 <?php } ?>
     </div>
-
-<?php
-displayPageFooter();
-?>
-

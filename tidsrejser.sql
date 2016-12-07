@@ -116,9 +116,9 @@ CREATE TABLE event_photos
 CREATE TABLE users
 (
   user_id      int       NOT NULL AUTO_INCREMENT,
-  user_name    char(50)  NOT NULL ,
-  user_email   char(255)  NULL ,
-  password varchar(32)   NULL ,
+  user_name    varchar(30) BINARY NOT NULL UNIQUE,
+  user_email   varchar(50)  NOT NULL UNIQUE,
+  password varchar(35)   NULL ,
   thumbnail char(250)  NULL ,
   PRIMARY KEY (user_id)
 ) ENGINE=InnoDB;
@@ -154,3 +154,8 @@ VALUES (2, 1, '56.437949', '10.344315000000051', 'Gammel Estrup', 'The Manor Mus
 
 INSERT INTO manors (manor_id, latitude, longitude, title, description_short, description, keywords, user_id)
 VALUES (3, 56.437949, 10.344315000000051,'Gammel Estrup','The Manor Museum is a private foundation and Danish Agricultural Museum','The museum is an interior museum, which means that the collection is set up in a way that illustrates how a manor house could have been arranged at different times.','interior, museum, manor, culture',1);
+
+INSERT INTO manors (manor_id, latitude, longitude, title, description_short, description, keywords, user_id)
+VALUES (4, 52.197778, 18.608333,'Kølo','The castle and the view','Gå på opdagelse i en af Danmarks bedst bevarede middelalderborge og kom næsten 700 år tilbage i tiden. 
+I begyndelsen af 1300 tallet gjorde de jyske bønder oprør mod kongen pga. hans mange krige og hårde skatter.','view, museum, manor, culture',1);
+

@@ -1,7 +1,7 @@
 <?php
 
 require_once( "common.inc.php" );
-require_once( "config.php" );
+require_once( "../config.php" );
 require_once( "classes/Member.class.php" );
 require_once( "classes/LogEntry.class.php" );
 

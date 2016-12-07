@@ -1,7 +1,7 @@
 <?php
 
 // provide the database connection details
-require_once "./config.php";
+require_once "../config.php";
 
 // more safe is to use following location for config file
 // require_once "../config.php";
