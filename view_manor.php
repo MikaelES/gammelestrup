@@ -15,9 +15,9 @@ if ( !$member = Member::getMember( $memberId ) ) {
 }
 
 if ( isset( $_POST["action"] ) and $_POST["action"] == "Save Changes" ) {
-  saveMember();
+  saveManor();
 } elseif ( isset( $_POST["action"] ) and $_POST["action"] == "Delete Member" ) {
-  deleteMember();
+  deleteManor();
 } else {
   displayForm( array(), array(), $member );
 }
